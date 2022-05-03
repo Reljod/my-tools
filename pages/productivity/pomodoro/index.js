@@ -1,4 +1,4 @@
-import Timer from '@Pomodoro/timer'
+import Timer from '@Pomodoro/Timer'
 
 export default function PomodoroTimer() {
   return (

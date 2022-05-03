@@ -1,3 +1,4 @@
+
 .timerContainer {
 	width: 60vw;
 	display: flex;
@@ -6,7 +7,8 @@
 }
 
 .timer {
-	font-size: 100px; 
+	color: rgb(112, 231, 206);
+	font-size: 8rem;
 }
 
 .button-timer {

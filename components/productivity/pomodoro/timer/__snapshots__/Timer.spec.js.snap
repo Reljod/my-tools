@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timer component Default behavior Should render the default Timer as expected 1`] = `
+<div
+  className="container w-25 mx-75"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col d-flex justify-content-center display-1 timer"
+    >
+      25:00
+    </div>
+  </div>
+  <div
+    className="row flex-row justify-content-around my-2"
+    name="countdownControl"
+  >
+    <button
+      className="col-10 btn btn-primary"
+      name="start-button"
+      onClick={[Function]}
+      type="button"
+    >
+      Start
+    </button>
+  </div>
+  <div
+    className="row my-2"
+    name="timerControl"
+  >
+    <input
+      className="form-range col"
+      disabled={false}
+      id="customRange3"
+      max="55"
+      min="5"
+      onChange={[Function]}
+      step="5"
+      type="range"
+      value={25}
+    />
+  </div>
+</div>
+`;

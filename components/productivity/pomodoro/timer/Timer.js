@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import Pause from 'assets/svg/pause.svg'
-import './Timer.module.css'
+import styles from './Timer.module.css'
 
 const buttonMap = {
   start: {
@@ -97,21 +97,25 @@ export default function Timer() {
   }, [isCountingDown, minutes, seconds])
 
   return (
-    <div className="container w-25">
+    <div className="container w-25 mx-75">
       <div className="row">
-        <div className='col-12 display-1'>
+        <div 
+          className={`col d-flex justify-content-center display-1 ${styles.timer}`}
+        >
           {`${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`}
         </div>
       </div>
-      <div name="countdownControl" className="row">
+      <div 
+        name="countdownControl" 
+        className="row flex-row justify-content-around my-2">
         {
           isCountingDown ? 
-          <div className="d-flex col-6 mx-auto">
+          <>
             <button
               name="pause-button"
               type="button" 
               onClick={onPauseButtonClick}
-              className={`btn ${buttonMap.pause.class}`}
+              className={`col-5 btn m-1 ${buttonMap.pause.class}`}
             >
               {buttonMap.pause.text}
             </button>
@@ -119,27 +123,25 @@ export default function Timer() {
               name="stop-button"
               type="button" 
               onClick={onStopButtonClick}
-              className={`btn btn-block button-timer ${buttonMap.stop.class}`}
+              className={`col-5 btn btn-block button-timer m-1 ${buttonMap.stop.class}`}
             >
               {buttonMap.stop.text}
             </button>
-          </div> : 
-          <div className='d-flex col-6 mx-auto"'>
-            <button
-              type="button"
-              onClick={() => {isTimerStart ? onResumeButtonClick() : onStartButtonClick()}}
-              className={`btn ${isTimerStart ? buttonMap.resume.class : buttonMap.start.class}`}
-            >
-              {isTimerStart ? buttonMap.resume.text : buttonMap.start.text}
-            </button>
-          </div>
+          </> : 
+          <button
+            type="button"
+            name="start-button"
+            onClick={() => {isTimerStart ? onResumeButtonClick() : onStartButtonClick()}}
+            className={`col-10 btn ${isTimerStart ? buttonMap.resume.class : buttonMap.start.class}`}
+          >
+            {isTimerStart ? buttonMap.resume.text : buttonMap.start.text}
+          </button>
         }
       </div>
-      <div name="timerControl" className="row">
-        <label htmlFor="customRange3" className="form-label">Control Timer</label>
+      <div name="timerControl" className="row my-2">
         <input 
           type="range" 
-          className="form-range" 
+          className="form-range col" 
           min="5" 
           max="55" 
           step="5" 

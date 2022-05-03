@@ -9,6 +9,7 @@ export default function Home() {
       <Head>
         <title>My Tools</title>
         <meta name="description" content="Compilation of my personal tools." />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <IntroCard/>

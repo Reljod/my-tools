@@ -1,0 +1,14 @@
+.timerContainer {
+	width: 60vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.timer {
+	font-size: 100px; 
+}
+
+.button-timer {
+	width: 100%;
+}

@@ -1,3 +1,8 @@
 * {
   box-sizing: content-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #3A5555 0% 0% no-repeat padding-box;
 }
